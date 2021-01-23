@@ -2,6 +2,7 @@ import React from 'react'
 import ThemeProvider from '../../theme/ThemeProvider';
 // Components
 import Nav from '../Nav/Nav';
+import HomeHero from '../HomeHero/HomeHero';
 import ViewProjects from '../ViewProjects/ViewProjects';
 import Button from '../Button/Button';
 import Footer from '../Footer/Footer';
@@ -62,6 +63,7 @@ function Home() {
   return (
     <ThemeProvider>
       <Nav />
+      <HomeHero />
       <ViewProjects
         projectsData={viewProjectsData}
       />

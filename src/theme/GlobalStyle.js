@@ -15,6 +15,13 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Jost', sans-serif;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .body--no-scroll {
+    max-height: 100vh;
+    overflow: hidden;
   }
 `
 

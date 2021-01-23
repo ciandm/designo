@@ -14,6 +14,10 @@ function Nav() {
     return () => window.removeEventListener("resize", updateMedia);
   })
 
+  const handleNavToggle = () => {
+    setOpen(prevOpen => !prevOpen)
+  }
+
   return (
     <S.Nav>
       <S.NavWrapper
@@ -26,7 +30,7 @@ function Nav() {
         {isMobile &&
           <S.Hamburger
             open={open}
-            onClick={() => setOpen(prevOpen => !prevOpen)}
+            onClick={() => handleNavToggle()}
           />
         }
         <S.NavItems

@@ -4,7 +4,7 @@ import close from '../../assets/shared/mobile/icon-close.svg';
 
 export const Nav = styled.nav`
   position: relative;
-  z-index: 100;
+  z-index: 4000;
 `
 
 export const NavWrapper = styled.div`
@@ -15,7 +15,7 @@ export const NavWrapper = styled.div`
   max-width: ${({ theme }) => theme.maxWidth};
   margin: 0 auto;
   padding: 3.6rem 2.4rem;
-  z-index: 100;
+  z-index: 1000;
 
   &::before {
     background-color: rgba(0, 0, 0, .5);
@@ -30,7 +30,7 @@ export const NavWrapper = styled.div`
     z-index: -1;
   }
 
-  @media ${({ theme }) => theme.mediaQueries['above-680']} {
+  @media ${({ theme }) => theme.mediaQueries['above-480']} {
     padding: 6.4rem 4rem;
   }
 
@@ -65,7 +65,7 @@ export const NavItems = styled.ul`
   position: absolute;
   top: 100%;
   width: 100%;
-  z-index: 100;
+  z-index: 5000;
 
   @media ${({ theme }) => theme.mediaQueries['above-680']} {
     align-items: center;

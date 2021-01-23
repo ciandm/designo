@@ -5,6 +5,7 @@ export const Button = styled.button.attrs(({ type }) => ({ type: type }))`
   border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
+  flex-shrink: 0;
   outline: none;
   letter-spacing: 1px;
   padding: 16px 24px;

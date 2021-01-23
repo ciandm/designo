@@ -16,6 +16,10 @@ export const Whitespace = styled.div`
   padding: 0 2.4rem;
   width: 100%;
   
+  @media ${({ theme }) => theme.mediaQueries['above-480']} {
+    padding: 0 4rem;
+  }
+  
   @media ${({ theme }) => theme.mediaQueries['above-1032']} {
     padding: 44.8rem 0 0;
     position: relative;
@@ -90,8 +94,8 @@ export const Copy = styled.div`
     line-height: 2.5rem;
     margin-bottom: 3.2rem;
 
-    @media ${({ theme }) => theme.mediaQueries['above-680']} {
-      max-width: 70%;
+    @media ${({ theme }) => theme.mediaQueries['above-480']} {
+      max-width: 60%;
       min-width: 30rem;
     }
 
@@ -132,6 +136,10 @@ export const Contents = styled.div`
   padding: 6.4rem 2.4rem;
   max-width: ${({ theme }) => theme.maxWidth};
   margin: 0 auto;
+
+  @media ${({ theme }) => theme.mediaQueries['above-480']} {
+    padding: 6.4rem 4rem;
+  }
 
   @media ${({ theme }) => theme.mediaQueries['above-1032']} {
     padding: 6.4rem 0;

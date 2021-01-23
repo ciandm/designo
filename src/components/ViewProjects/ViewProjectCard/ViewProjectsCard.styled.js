@@ -1,4 +1,7 @@
 import styled, { css } from 'styled-components';
+import {
+  h2
+} from '../../../theme/typography';
 import rightArrowIcon from '../../../assets/shared/desktop/icon-right-arrow.svg';
 
 export const Card = styled.div`
@@ -13,7 +16,7 @@ export const Card = styled.div`
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  padding: 90px 24px;
+  padding: 9rem 2.4rem;
   position: relative;
 
   &::after {
@@ -40,7 +43,7 @@ export const Card = styled.div`
 
   @media ${({ theme }) => theme.mediaQueries['above-768']} {
     background-image: ${({ backgroundImages }) => `url(${backgroundImages.desktop})`};
-    padding: 108px 24px;
+    padding: 10.8rem 1.2rem;
 
     ${({ gridRow }) => gridRow && css`
       grid-row: ${gridRow};
@@ -53,10 +56,9 @@ export const Contents = styled.div`
   z-index: 1;
 `
 
-export const Title = styled.h4`
+export const Title = styled(h2)`
   color: #FFF;
-  font-size: 2.8rem;
-  line-height: 3.6rem;
+  font-weight: 500;
   letter-spacing: 1.4px;
   margin-bottom: 1.2rem;
 `
@@ -67,6 +69,7 @@ export const Link = styled.a`
   display: flex;
   font-weight: 500;
   font-size: 1.5rem;
+  justify-content: center;
   line-height: 2.2rem;
   letter-spacing: 5px;
   text-decoration: none;
@@ -79,8 +82,8 @@ export const Link = styled.a`
     background-size: contain;
     content: '';
     display: block;
-    height: 16px;
+    height: 12px;
     margin-left: 1.6rem;
-    width: 16px;
+    width: 12px;
   }
 `
