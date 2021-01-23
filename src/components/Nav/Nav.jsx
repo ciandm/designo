@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import * as S from './Nav.styled';
 import logo from '../../assets/shared/desktop/logo-dark.png';
+import ROUTES from '../pages/routes/routes';
 
 function Nav() {
 
@@ -15,7 +16,8 @@ function Nav() {
   })
 
   const handleNavToggle = () => {
-    setOpen(prevOpen => !prevOpen)
+    setOpen(prevOpen => !prevOpen);
+    document.body.classList.toggle("body--no-scroll");
   }
 
   return (
@@ -23,10 +25,14 @@ function Nav() {
       <S.NavWrapper
         open={open}
       >
-        <S.Logo
-          src={logo}
-          alt="Designo logo"
-        />
+        <S.LogoContainer
+          to="/"
+        >
+          <S.Logo
+            src={logo}
+            alt="Designo logo"
+          />
+        </S.LogoContainer>
         {isMobile &&
           <S.Hamburger
             open={open}
@@ -36,9 +42,15 @@ function Nav() {
         <S.NavItems
           open={open}
         >
-          <S.NavItem>Our company</S.NavItem>
-          <S.NavItem>Locations</S.NavItem>
-          <S.NavItem>Contact</S.NavItem>
+          <S.NavLink
+            to={ROUTES.ABOUT}
+          >Our company</S.NavLink>
+          <S.NavLink
+            to={ROUTES.LOCATIONS}
+          >Locations</S.NavLink>
+          <S.NavLink
+            to={ROUTES.CONTACT}
+          >Contact</S.NavLink>
         </S.NavItems>
       </S.NavWrapper>
     </S.Nav>

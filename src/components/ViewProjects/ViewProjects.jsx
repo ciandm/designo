@@ -14,9 +14,10 @@ function ViewProjects({
           projectsData.map(c => (
             <ViewProjectsCard
               key={c.id}
-              backgroundImages={c.backgroundImages}
+              background={c.background}
               projectTitle={c.projectTitle}
-              gridRow={c.gridRow}
+              rowSpan={c.rowSpan}
+              to={c.route}
             />
           ))
         }

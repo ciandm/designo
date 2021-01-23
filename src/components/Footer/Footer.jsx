@@ -1,6 +1,8 @@
 import React from 'react'
 import Button from '../Button/Button';
 import * as S from './Footer.styled';
+import { Link } from 'react-router-dom';
+import ROUTES from '../pages/routes/routes';
 // images
 import logo from '../../assets/shared/desktop/logo-light.png';
 import facebook from '../../assets/shared/desktop/icon-facebook.svg';
@@ -20,6 +22,8 @@ function Footer() {
           </S.Copy>
           <Button
             variation="white"
+            as={Link}
+            to={ROUTES.CONTACT}
           >
             Get in touch
           </Button>
@@ -28,16 +32,24 @@ function Footer() {
       <S.Footer>
         <S.Contents>
           <S.FooterNav>
-            <S.LogoContainer>
+            <S.LogoContainer
+              to={ROUTES.HOME}
+            >
               <S.Logo
                 src={logo}
                 alt="Designo logo"
               />
             </S.LogoContainer>
             <S.Links>
-              <S.Link>Our company</S.Link>
-              <S.Link>Locations</S.Link>
-              <S.Link>Contact</S.Link>
+              <S.FooterLink
+                to={ROUTES.ABOUT}
+              >Our company</S.FooterLink>
+              <S.FooterLink
+                to={ROUTES.LOCATIONS}
+              >Locations</S.FooterLink>
+              <S.FooterLink
+                to={ROUTES.CONTACT}
+              >Contact</S.FooterLink>
             </S.Links>
           </S.FooterNav>
           <S.Details>

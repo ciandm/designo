@@ -1,5 +1,6 @@
 import React from 'react'
 import ThemeProvider from '../../theme/ThemeProvider';
+import ROUTES from './routes/routes';
 // Components
 import Nav from '../Nav/Nav';
 import HomeHero from '../HomeHero/HomeHero';
@@ -31,32 +32,35 @@ function Home() {
   const viewProjectsData = [
     {
       id: "web-design",
-      backgroundImages: {
+      background: {
         mobile: imageWebDesignMobile,
         tablet: imageWebDesignTablet,
         desktop: imageWebDesignDesktop
       },
       projectTitle: "Web Design",
+      route: ROUTES.WEB_DESIGN,
       // spans 2 rows on desktop
-      gridRow: 'span 2'
+      rowSpan: 'span 2'
     },
     {
       id: "app-design",
-      backgroundImages: {
+      background: {
         mobile: imageAppDesignMobile,
         tablet: imageAppDesignTablet,
         desktop: imageAppDesignDesktop
       },
-      projectTitle: "App Design"
+      projectTitle: "App Design",
+      route: ROUTES.APP_DESIGN,
     },
     {
       id: "graphic-design",
-      backgroundImages: {
+      background: {
         mobile: imageGraphicDesignMobile,
         tablet: imageGraphicDesignTablet,
         desktop: imageGraphicDesignDesktop
       },
-      projectTitle: "Graphic Design"
+      projectTitle: "Graphic Design",
+      route: ROUTES.GRAPHIC_DESIGN,
     },
   ]
 

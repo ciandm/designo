@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import letsTalkPattern from '../../assets/shared/desktop/bg-pattern-call-to-action.svg';
 import bgLeaf from '../../assets/shared/desktop/bg-pattern-leaf.svg';
+import { Link } from 'react-router-dom';
 
 export const FooterWrapper = styled.div`
   align-items: center;
@@ -19,7 +20,7 @@ export const Whitespace = styled.div`
   @media ${({ theme }) => theme.mediaQueries['above-480']} {
     padding: 0 4rem;
   }
-  
+
   @media ${({ theme }) => theme.mediaQueries['above-1032']} {
     padding: 44.8rem 0 0;
     position: relative;
@@ -157,7 +158,7 @@ export const FooterNav = styled.nav`
   }
 `
 
-export const LogoContainer = styled.div`
+export const LogoContainer = styled(Link)`
   border-bottom: 1px solid rgba(255, 255, 255, .1);
   justify-content: center;
   display: flex;
@@ -187,11 +188,16 @@ export const Links = styled.ul`
   }
 `
 
-export const Link = styled.li`
+export const FooterLink = styled(Link)`
   color: ${({ theme }) => theme.colors.primary.white};
   font-size: 1.4rem;
   line-height: 1;
   text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 
   & + & {
     margin-top: 3.2rem;

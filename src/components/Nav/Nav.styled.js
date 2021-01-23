@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import hamburger from '../../assets/shared/mobile/icon-hamburger.svg';
 import close from '../../assets/shared/mobile/icon-close.svg';
+import { NavLink as Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
   position: relative;
@@ -37,6 +38,10 @@ export const NavWrapper = styled.div`
   @media ${({ theme }) => theme.mediaQueries['above-1032']} {
     padding: 6rem 0;
   }
+`
+
+export const LogoContainer = styled(Link)`
+  
 `
 
 export const Logo = styled.img`
@@ -78,13 +83,18 @@ export const NavItems = styled.ul`
   }
 `
 
-export const NavItem = styled.li`
+export const NavLink = styled(Link).attrs({ activeClassName: 'nav-item-active' })`
   color: ${({ theme }) => theme.colors.primary.white};
   font-size: 2.4rem;
   line-height: 2.5rem;
   letter-spacing: 2px;
+  text-decoration: none;
   text-transform: uppercase;
   padding: 0 2.4rem;
+
+  &.nav-item-active {
+    text-decoration: underline;
+  }
 
   &:hover {
     text-decoration: underline;

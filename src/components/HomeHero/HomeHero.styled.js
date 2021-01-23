@@ -11,11 +11,11 @@ export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.primary.peach};
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   padding-top: 8rem;
   position: relative;
   margin-bottom: 6rem;
   max-width: ${({ theme }) => theme.maxWidth};
+  overflow: hidden;
 
   &::before {
     background-image: url(${bgPattern});
@@ -80,6 +80,10 @@ export const Intro = styled.div`
 
 export const Headline = styled(h1)`
   margin-bottom: 2.4rem;
+
+  @media ${({ theme }) => theme.mediaQueries['above-1032']} {
+    margin-bottom: 3.2rem;
+  }
 `
 
 export const Subheading = styled(body)`

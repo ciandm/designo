@@ -5,11 +5,13 @@ import * as Styled from './Button.styled';
 const Button = ({
   variation,
   children,
-  buttonClickHandler
+  buttonClickHandler,
+  ...rest
 }) => {
   return (
     <Styled.Button
       variation={variation}
+      {...rest}
     >
       {children}
     </Styled.Button>

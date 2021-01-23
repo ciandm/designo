@@ -1,6 +1,8 @@
 import React from 'react'
 import * as S from './HomeHero.styled'
 import Button from '../Button/Button'
+import { Link } from 'react-router-dom';
+import ROUTES from '../pages/routes/routes';
 
 function HomeHero() {
   return (
@@ -14,6 +16,8 @@ function HomeHero() {
         </S.Subheading>
         <Button
           variation="white"
+          as={Link}
+          to={ROUTES.ABOUT}
         >Learn more</Button>
       </S.Intro>
       <S.PhoneContainer>

@@ -6,10 +6,12 @@ export const Button = styled.button.attrs(({ type }) => ({ type: type }))`
   cursor: pointer;
   font-weight: 500;
   flex-shrink: 0;
+  font-size: 1.5rem;
   outline: none;
   letter-spacing: 1px;
-  padding: 16px 24px;
+  padding: 1.6rem 2.4rem;
   text-transform: uppercase;
+  text-decoration: none;
 
   ${({ variation }) => {
     if (variation === 'white') {

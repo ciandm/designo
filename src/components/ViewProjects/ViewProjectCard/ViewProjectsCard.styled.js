@@ -3,10 +3,11 @@ import {
   h2
 } from '../../../theme/typography';
 import rightArrowIcon from '../../../assets/shared/desktop/icon-right-arrow.svg';
+import { Link } from 'react-router-dom'
 
-export const Card = styled.div`
+export const Card = styled(Link)`
   align-items: center;
-  background-image: ${({ backgroundImages }) => `url(${backgroundImages.mobile})`};
+  background-image: ${({ background }) => `url(${background.mobile})`};
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -18,6 +19,7 @@ export const Card = styled.div`
   overflow: hidden;
   padding: 9rem 2.4rem;
   position: relative;
+  text-decoration: none;
 
   &::after {
     background-color: rgba(0, 0, 0, 0.5);
@@ -38,15 +40,15 @@ export const Card = styled.div`
   }
 
   @media ${({ theme }) => theme.mediaQueries['above-480']} {
-    background-image: ${({ backgroundImages }) => `url(${backgroundImages.tablet})`};
+    background-image: ${({ background }) => `url(${background.tablet})`};
   }
 
   @media ${({ theme }) => theme.mediaQueries['above-768']} {
-    background-image: ${({ backgroundImages }) => `url(${backgroundImages.desktop})`};
+    background-image: ${({ background }) => `url(${background.desktop})`};
     padding: 10.8rem 1.2rem;
 
-    ${({ gridRow }) => gridRow && css`
-      grid-row: ${gridRow};
+    ${({ rowSpan }) => rowSpan && css`
+      grid-row: ${rowSpan};
     `}
   }
 `
@@ -63,7 +65,7 @@ export const Title = styled(h2)`
   margin-bottom: 1.2rem;
 `
 
-export const Link = styled.a`
+export const Subtitle = styled.p`
   align-items: center;
   color: #FFFFFF;
   display: flex;
