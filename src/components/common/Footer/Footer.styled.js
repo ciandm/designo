@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import letsTalkPattern from '../../../assets/shared/desktop/bg-pattern-call-to-action.svg';
-import bgLeaf from '../../../assets/shared/desktop/bg-pattern-leaf.svg';
 import { Link } from 'react-router-dom';
 
 export const FooterWrapper = styled.div`

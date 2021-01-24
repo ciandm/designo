@@ -17,10 +17,11 @@ function GraphicDesign() {
   return (
     <ThemeProvider>
       <Nav />
-      <DesignHero
-        title="Grapic Design">
-        We deliver eye-catching branding materials that are
-        tailored to meet your business objectives.
+      <DesignHero>
+        {{
+          title: "Graphic Design",
+          subtitle: "We deliver eye-catching branding materials that are tailored to meet your business objectives."
+        }}
       </DesignHero>
       <LeafPattern
         top={280}

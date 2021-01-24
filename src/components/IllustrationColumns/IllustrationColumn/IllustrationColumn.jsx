@@ -7,10 +7,11 @@ function IllustrationColumn({
   imageAlt,
   gradientRotation,
   columnContent,
-  title,
   wrapsOnTablet,
   children
 }) {
+
+  const { title, body } = children;
 
   return (
     <S.Column
@@ -34,17 +35,13 @@ function IllustrationColumn({
         >
           {title}
         </S.Title>
-        {React.Children.map(children, (child) => {
-          if (child.type === 'p') {
-            return (
-              <S.Body
-                wrapsOnTablet={wrapsOnTablet}
-              >{child.props.children}</S.Body>
+        {
+          columnContent === 'text' ? (
+            <S.Body>{body}</S.Body>
+          ) : (
+              body
             )
-          } else {
-            return child;
-          }
-        })}
+        }
       </S.Content>
     </S.Column>
   )
@@ -57,7 +54,5 @@ IllustrationColumn.propTypes = {
   imageAlt: PropTypes.string.isRequired,
   gradientRotation: PropTypes.string.isRequired,
   columnContent: PropTypes.oneOf(['text', 'button']).isRequired,
-  title: PropTypes.string.isRequired,
   wrapsOnTablet: PropTypes.bool,
-  children: PropTypes.node,
 }

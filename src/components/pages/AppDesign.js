@@ -17,10 +17,11 @@ function AppDesign() {
   return (
     <ThemeProvider>
       <Nav />
-      <DesignHero
-        title="App Design">
-        Our mobile designs bring intuitive digital solutions
-        to your customers right at their fingertips.
+      <DesignHero>
+        {{
+          title: "App Design",
+          subtitle: "Our mobile designs bring intuitive digital solutions to your customers right at their fingertips."
+        }}
       </DesignHero>
       <LeafPattern
         top={280}

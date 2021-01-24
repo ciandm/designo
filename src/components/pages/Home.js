@@ -34,34 +34,40 @@ function Home() {
       />
       <IllustrationColumns>
         <IllustrationColumn
-          title="Passionate"
           imageURL={passionateIllustration}
           imageAlt="Passionate illustration"
           gradientRotation="180deg"
           columnContent="text"
           wrapsOnTablet={true}
         >
-          <p>Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and technology into exciting new solutions.</p>
+          {{
+            title: "Passionate",
+            body: "Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and technology into exciting new solutions."
+          }}
         </IllustrationColumn>
         <IllustrationColumn
-          title="Resourceful"
           imageURL={resourcefulIllustration}
           imageAlt="Resourceful illustration"
           gradientRotation="90deg"
           columnContent="text"
           wrapsOnTablet={true}
         >
-          <p>Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer collaboration. It guarantees superior results that fulfill our clients’ needs.</p>
+          {{
+            title: "Resourceful",
+            body: "Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer collaboration. It guarantees superior results that fulfill our clients’ needs."
+          }}
         </IllustrationColumn>
         <IllustrationColumn
-          title="Friendly"
           imageURL={friendlyIllustration}
           imageAlt="Friendly illustration"
           gradientRotation="-90deg"
           columnContent="text"
           wrapsOnTablet={true}
         >
-          <p>We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.</p>
+          {{
+            title: "Friendly",
+            body: "We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide."
+          }}
         </IllustrationColumn>
       </IllustrationColumns>
       <LeafPattern

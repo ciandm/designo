@@ -17,9 +17,11 @@ function WebDesign() {
   return (
     <ThemeProvider>
       <Nav />
-      <DesignHero
-        title="Web Design">
-        We build websites that serve as powerful marketing tools and bring memorable brand experiences.
+      <DesignHero>
+        {{
+          title: "Web Design",
+          subtitle: "We build websites that serve as powerful marketing tools and bring memorable brand experiences."
+        }}
       </DesignHero>
       <LeafPattern
         top={280}
