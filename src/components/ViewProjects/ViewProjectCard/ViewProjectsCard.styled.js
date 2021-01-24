@@ -5,9 +5,28 @@ import {
 import rightArrowIcon from '../../../assets/shared/desktop/icon-right-arrow.svg';
 import { Link } from 'react-router-dom'
 
+const images = {
+  app_design: {
+    desktop: require('../../../assets/home/desktop/image-app-design.jpg').default,
+    tablet: require('../../../assets/home/tablet/image-app-design.jpg').default,
+    mobile: require('../../../assets/home/mobile/image-app-design.jpg').default,
+  },
+  graphic_design: {
+    desktop: require('../../../assets/home/desktop/image-graphic-design.jpg').default,
+    tablet: require('../../../assets/home/tablet/image-graphic-design.jpg').default,
+    mobile: require('../../../assets/home/mobile/image-graphic-design.jpg').default,
+  },
+  web_design: {
+    desktop: require('../../../assets/home/desktop/image-web-design-small.jpg').default,
+    desktopXL: require('../../../assets/home/desktop/image-web-design-large.jpg').default,
+    tablet: require('../../../assets/home/tablet/image-web-design.jpg').default,
+    mobile: require('../../../assets/home/mobile/image-web-design.jpg').default,
+  }
+}
+
 export const Card = styled(Link)`
   align-items: center;
-  background-image: ${({ background }) => `url(${background.mobile})`};
+  background-image: ${({ id }) => `url(${images[id].mobile})`};
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -40,11 +59,12 @@ export const Card = styled(Link)`
   }
 
   @media ${({ theme }) => theme.mediaQueries['above-480']} {
-    background-image: ${({ background }) => `url(${background.tablet})`};
+    background-image: ${({ id }) => `url(${images[id].tablet})`};
   }
 
   @media ${({ theme }) => theme.mediaQueries['above-768']} {
-    background-image: ${({ background }) => `url(${background.desktop})`};
+    // if there is a rowSpan prop, it is a taller column and requires a larger photo.
+    background-image: ${({ rowSpan, id }) => rowSpan ? `url(${images[id].desktopXL})` : `url(${images[id].desktop})`};
     padding: 10.8rem 1.2rem;
 
     ${({ rowSpan }) => rowSpan && css`

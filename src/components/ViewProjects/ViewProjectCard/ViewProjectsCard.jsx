@@ -22,6 +22,5 @@ export default ViewProjectsCard
 
 
 ViewProjectsCard.propTypes = {
-  background: PropTypes.object.isRequired,
   projectTitle: PropTypes.string.isRequired,
 }

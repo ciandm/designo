@@ -4,17 +4,19 @@ import ViewProjectsCard from './ViewProjectCard/ViewProjectsCard';
 import * as S from './ViewProjects.styled';
 
 function ViewProjects({
-  grid,
+  smallerMarginY,
   projectsData
 }) {
   return (
-    <S.Container>
+    <S.Container
+      smallerMarginY={smallerMarginY}
+    >
       <S.Grid>
         {
           projectsData.map(c => (
             <ViewProjectsCard
               key={c.id}
-              background={c.background}
+              id={c.id}
               projectTitle={c.projectTitle}
               rowSpan={c.rowSpan}
               to={c.route}
@@ -29,5 +31,6 @@ function ViewProjects({
 export default ViewProjects
 
 ViewProjects.propTypes = {
+  smallerMarginY: PropTypes.bool,
   projectsData: PropTypes.array.isRequired,
 }

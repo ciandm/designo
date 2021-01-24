@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import hamburger from '../../assets/shared/mobile/icon-hamburger.svg';
-import close from '../../assets/shared/mobile/icon-close.svg';
+import hamburger from '../../../assets/shared/mobile/icon-hamburger.svg';
+import close from '../../../assets/shared/mobile/icon-close.svg';
 import { NavLink as Link } from 'react-router-dom'
 
 export const Nav = styled.nav`

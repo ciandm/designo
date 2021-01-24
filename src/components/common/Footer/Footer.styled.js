@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import letsTalkPattern from '../../assets/shared/desktop/bg-pattern-call-to-action.svg';
-import bgLeaf from '../../assets/shared/desktop/bg-pattern-leaf.svg';
+import letsTalkPattern from '../../../assets/shared/desktop/bg-pattern-call-to-action.svg';
+import bgLeaf from '../../../assets/shared/desktop/bg-pattern-leaf.svg';
 import { Link } from 'react-router-dom';
 
 export const FooterWrapper = styled.div`
@@ -25,23 +25,6 @@ export const Whitespace = styled.div`
     padding: 44.8rem 0 0;
     position: relative;
     margin-top: -44.8rem;
-
-    &::before {
-      background-image: url(${bgLeaf});
-      background-repeat: no-repeat;
-      background-position: left;
-      bottom: 0;
-      content: '';
-      display: block;
-      left: 0;
-      margin: 0 auto;
-      max-width: 144rem;
-      position: absolute;
-      right: 0;
-      top: 0;
-      transform: rotate(180deg) translateY(8rem);
-      z-index: -500;
-    }
   }
 `
 

@@ -1,19 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import * as S from './Nav.styled';
-import logo from '../../assets/shared/desktop/logo-dark.png';
-import ROUTES from '../pages/routes/routes';
+import logo from '../../../assets/shared/desktop/logo-dark.png';
+import ROUTES from '../../pages/routes/routes';
+import { useWindowSize } from '../../../theme/ThemeProvider';
 
 function Nav() {
 
   const [open, setOpen] = useState(false);
   // deviating from the theme media queries as this is the width where nav begins wrapping
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 680);
-  const updateMedia = () => setIsMobile(window.innerWidth < 680);
-
-  useEffect(() => {
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  })
+  const isMobile = useWindowSize() < 680;
 
   const handleNavToggle = () => {
     setOpen(prevOpen => !prevOpen);

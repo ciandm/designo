@@ -1,26 +1,16 @@
 import React from 'react'
-import ThemeProvider from '../../theme/ThemeProvider';
+import ThemeProvider, { useWindowSize } from '../../theme/ThemeProvider';
 import ROUTES from './routes/routes';
 // Components
-import Nav from '../Nav/Nav';
+import Nav from '../common/Nav/Nav';
 import HomeHero from '../HomeHero/HomeHero';
 import ViewProjects from '../ViewProjects/ViewProjects';
-import Button from '../Button/Button';
-import Footer from '../Footer/Footer';
+import LeafPattern from '../common/LeafPattern/LeafPattern';
+import Button from '../common/Button/Button';
+import Footer from '../common/Footer/Footer';
 import IllustrationColumns from '../IllustrationColumns/IllustrationColumns';
 import IllustrationColumn from '../IllustrationColumns/IllustrationColumn/IllustrationColumn';
-// Web Design images
-import imageWebDesignMobile from '../../assets/home/mobile/image-web-design.jpg';
-import imageWebDesignTablet from '../../assets/home/tablet/image-web-design.jpg';
-import imageWebDesignDesktop from '../../assets/home/desktop/image-web-design-large.jpg';
-// App Design images
-import imageAppDesignMobile from '../../assets/home/mobile/image-app-design.jpg';
-import imageAppDesignTablet from '../../assets/home/tablet/image-app-design.jpg';
-import imageAppDesignDesktop from '../../assets/home/desktop/image-app-design.jpg';
-// Graphic Design images
-import imageGraphicDesignMobile from '../../assets/home/mobile/image-graphic-design.jpg';
-import imageGraphicDesignTablet from '../../assets/home/tablet/image-graphic-design.jpg';
-import imageGraphicDesignDesktop from '../../assets/home/desktop/image-graphic-design.jpg';
+
 // Illustrations
 import passionateIllustration from '../../assets/home/desktop/illustration-passionate.svg';
 import resourcefulIllustration from '../../assets/home/desktop/illustration-resourceful.svg';
@@ -28,37 +18,21 @@ import friendlyIllustration from '../../assets/home/desktop/illustration-friendl
 
 
 function Home() {
-
   const viewProjectsData = [
     {
-      id: "web-design",
-      background: {
-        mobile: imageWebDesignMobile,
-        tablet: imageWebDesignTablet,
-        desktop: imageWebDesignDesktop
-      },
+      id: "web_design",
       projectTitle: "Web Design",
       route: ROUTES.WEB_DESIGN,
       // spans 2 rows on desktop
       rowSpan: 'span 2'
     },
     {
-      id: "app-design",
-      background: {
-        mobile: imageAppDesignMobile,
-        tablet: imageAppDesignTablet,
-        desktop: imageAppDesignDesktop
-      },
+      id: "app_design",
       projectTitle: "App Design",
       route: ROUTES.APP_DESIGN,
     },
     {
-      id: "graphic-design",
-      background: {
-        mobile: imageGraphicDesignMobile,
-        tablet: imageGraphicDesignTablet,
-        desktop: imageGraphicDesignDesktop
-      },
+      id: "graphic_design",
       projectTitle: "Graphic Design",
       route: ROUTES.GRAPHIC_DESIGN,
     },
@@ -68,6 +42,9 @@ function Home() {
     <ThemeProvider>
       <Nav />
       <HomeHero />
+      <LeafPattern
+        top={475}
+      />
       <ViewProjects
         projectsData={viewProjectsData}
       />
@@ -103,6 +80,10 @@ function Home() {
           <p>We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.</p>
         </IllustrationColumn>
       </IllustrationColumns>
+      <LeafPattern
+        top={1820}
+        rotation={180}
+      />
       <Footer />
     </ThemeProvider>
   )

@@ -2,14 +2,14 @@ import React from 'react'
 import Button from '../Button/Button';
 import * as S from './Footer.styled';
 import { Link } from 'react-router-dom';
-import ROUTES from '../pages/routes/routes';
+import ROUTES from '../../pages/routes/routes';
 // images
-import logo from '../../assets/shared/desktop/logo-light.png';
-import facebook from '../../assets/shared/desktop/icon-facebook.svg';
-import instagram from '../../assets/shared/desktop/icon-instagram.svg';
-import pinterest from '../../assets/shared/desktop/icon-pinterest.svg';
-import twitter from '../../assets/shared/desktop/icon-twitter.svg';
-import youtube from '../../assets/shared/desktop/icon-youtube.svg';
+import logo from '../../../assets/shared/desktop/logo-light.png';
+import facebook from '../../../assets/shared/desktop/icon-facebook.svg';
+import instagram from '../../../assets/shared/desktop/icon-instagram.svg';
+import pinterest from '../../../assets/shared/desktop/icon-pinterest.svg';
+import twitter from '../../../assets/shared/desktop/icon-twitter.svg';
+import youtube from '../../../assets/shared/desktop/icon-youtube.svg';
 
 function Footer() {
   return (

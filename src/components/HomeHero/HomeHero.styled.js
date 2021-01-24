@@ -48,7 +48,7 @@ export const Wrapper = styled.div`
   @media ${({ theme }) => theme.mediaQueries['above-1032']} {
     align-items: stretch;
     flex-direction: row;
-    margin: 0 auto;
+    margin: 0 auto 6rem;
     padding-top: 0;
     padding-left: 9.6rem;
   }

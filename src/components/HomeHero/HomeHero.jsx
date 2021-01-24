@@ -1,6 +1,6 @@
 import React from 'react'
 import * as S from './HomeHero.styled'
-import Button from '../Button/Button'
+import Button from '../common/Button/Button'
 import { Link } from 'react-router-dom';
 import ROUTES from '../pages/routes/routes';
 
