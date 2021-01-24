@@ -23,11 +23,13 @@ export const Container = styled.main`
     gap: 3.2rem 3rem;
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     margin: 0 auto;
+    padding: 8rem 0;
   }
 `
 
 export const Card = styled.div`
   border-radius: 1.5rem;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -83,11 +85,29 @@ export const Details = styled.div`
     padding: 3.2rem;
     width: 100%;
   }
+
+  @media ${({ theme }) => theme.mediaQueries['above-1032']} {
+    ${Card}:hover & {
+      background-color: ${({ theme }) => theme.colors.primary.peach};
+    }
+  }
 `
 
 export const Title = styled(h3)`
   color: ${({ theme }) => theme.colors.primary.peach};
   margin-bottom: 1.6rem;
+
+  @media ${({ theme }) => theme.mediaQueries['above-1032']} {
+    ${Card}:hover & {
+      color: ${({ theme }) => theme.colors.primary.white};
+    }
+  }
 `
 
-export const Subtitle = styled(body)``
+export const Subtitle = styled(body)`
+  @media ${({ theme }) => theme.mediaQueries['above-1032']} {
+    ${Card}:hover & {
+      color: ${({ theme }) => theme.colors.primary.white};
+    }
+  }
+`

@@ -14,21 +14,19 @@ import youtube from '../../../assets/shared/desktop/icon-youtube.svg';
 function Footer() {
   return (
     <S.FooterWrapper>
-      <S.Whitespace>
-        <S.LetsTalk>
-          <S.Copy>
-            <h2>Let’s talk about your project</h2>
-            <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
-          </S.Copy>
-          <Button
-            variation="white"
-            as={Link}
-            to={ROUTES.CONTACT}
-          >
-            Get in touch
+      <S.LetsTalk>
+        <S.Copy>
+          <h2>Let’s talk about your project</h2>
+          <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
+        </S.Copy>
+        <Button
+          variation="white"
+          as={Link}
+          to={ROUTES.CONTACT}
+        >
+          Get in touch
           </Button>
-        </S.LetsTalk>
-      </S.Whitespace>
+      </S.LetsTalk>
       <S.Footer>
         <S.Contents>
           <S.FooterNav>

@@ -4,28 +4,10 @@ import bgLeaf from '../../../assets/shared/desktop/bg-pattern-leaf.svg';
 import { Link } from 'react-router-dom';
 
 export const FooterWrapper = styled.div`
-  align-items: center;
+  align-items: stretch;
   display: flex;
   flex-direction: column;
   padding-top: 6rem;
-`
-
-export const Whitespace = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  padding: 0 2.4rem;
-  width: 100%;
-  
-  @media ${({ theme }) => theme.mediaQueries['above-480']} {
-    padding: 0 4rem;
-  }
-
-  @media ${({ theme }) => theme.mediaQueries['above-1032']} {
-    padding: 44.8rem 0 0;
-    position: relative;
-    margin-top: -44.8rem;
-  }
 `
 
 export const LetsTalk = styled.div`
@@ -38,17 +20,23 @@ export const LetsTalk = styled.div`
   color: ${({ theme }) => theme.colors.primary.white};
   display: flex;
   flex-direction: column;
+  margin: 0 2.4rem;
   max-width: ${({ theme }) => theme.maxWidth};
   padding: 6.4rem 2.4rem;
-  width: 100%;
+
+  @media ${({ theme }) => theme.mediaQueries['above-480']} {
+    margin: 0 4rem;
+  }
 
   @media ${({ theme }) => theme.mediaQueries['above-680']} {
     padding: 6rem;
   }
 
   @media ${({ theme }) => theme.mediaQueries['above-1032']} {
+    align-self: center;
     flex-direction: row;
     justify-content: space-between;
+    margin: 0;
     padding: 7.2rem 9.6rem;
   }
 `
@@ -109,7 +97,7 @@ export const Footer = styled.footer`
     top: -19rem;
     z-index: -1;
 
-    @media ${({ theme }) => theme.mediaQueries['above-680']} {
+    @media ${({ theme }) => theme.mediaQueries['above-480']} {
       height: 7.2rem;
       top: -7.2rem;
     }

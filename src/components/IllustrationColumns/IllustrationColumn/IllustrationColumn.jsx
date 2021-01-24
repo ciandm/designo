@@ -6,7 +6,7 @@ function IllustrationColumn({
   imageURL,
   imageAlt,
   gradientRotation,
-  columnType,
+  columnContent,
   title,
   wrapsOnTablet,
   children
@@ -15,7 +15,7 @@ function IllustrationColumn({
   return (
     <S.Column
       wrapsOnTablet={wrapsOnTablet}
-      columnType={columnType}
+      columnContent={columnContent}
     >
       <S.ImageWrapper
         gradientRotation={gradientRotation}
@@ -56,7 +56,7 @@ IllustrationColumn.propTypes = {
   imageURL: PropTypes.string.isRequired,
   imageAlt: PropTypes.string.isRequired,
   gradientRotation: PropTypes.string.isRequired,
-  columnType: PropTypes.oneOf(['text', 'button']).isRequired,
+  columnContent: PropTypes.oneOf(['text', 'button']).isRequired,
   title: PropTypes.string.isRequired,
   wrapsOnTablet: PropTypes.bool,
   children: PropTypes.node,

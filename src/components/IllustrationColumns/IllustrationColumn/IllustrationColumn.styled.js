@@ -10,10 +10,10 @@ export const Column = styled.div`
   flex-direction: column;
 
   & + & { 
-    margin-top: ${({ columnType }) => columnType === 'text' ? '8rem' : '4.8rem'};
+    margin-top: ${({ columnContent }) => columnContent === 'text' ? '8rem' : '4.8rem'};
 
-    @media ${({ theme }) => theme.mediaQueries['above-768']} {
-      margin-top: ${({ columnType }) => columnType === 'text' ? '3.2rem' : '4.8rem'};
+    @media ${({ theme }) => theme.mediaQueries['above-480']} {
+      margin-top: ${({ columnContent }) => columnContent === 'text' ? '3.2rem' : '8rem'};
     }
 
     @media ${({ theme }) => theme.mediaQueries['above-1032']} {
@@ -68,6 +68,7 @@ export const Image = styled.img`
 `
 
 export const Content = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: column;
 

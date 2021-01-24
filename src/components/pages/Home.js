@@ -6,10 +6,14 @@ import Nav from '../common/Nav/Nav';
 import HomeHero from '../HomeHero/HomeHero';
 import ViewProjects from '../ViewProjects/ViewProjects';
 import LeafPattern from '../common/LeafPattern/LeafPattern';
-import Button from '../common/Button/Button';
 import Footer from '../common/Footer/Footer';
 import IllustrationColumns from '../IllustrationColumns/IllustrationColumns';
 import IllustrationColumn from '../IllustrationColumns/IllustrationColumn/IllustrationColumn';
+
+// data
+import {
+  viewProjectsData
+} from './pagesData/HomeData';
 
 // Illustrations
 import passionateIllustration from '../../assets/home/desktop/illustration-passionate.svg';
@@ -18,26 +22,6 @@ import friendlyIllustration from '../../assets/home/desktop/illustration-friendl
 
 
 function Home() {
-  const viewProjectsData = [
-    {
-      id: "web_design",
-      projectTitle: "Web Design",
-      route: ROUTES.WEB_DESIGN,
-      // spans 2 rows on desktop
-      rowSpan: 'span 2'
-    },
-    {
-      id: "app_design",
-      projectTitle: "App Design",
-      route: ROUTES.APP_DESIGN,
-    },
-    {
-      id: "graphic_design",
-      projectTitle: "Graphic Design",
-      route: ROUTES.GRAPHIC_DESIGN,
-    },
-  ]
-
   return (
     <ThemeProvider>
       <Nav />
@@ -54,7 +38,7 @@ function Home() {
           imageURL={passionateIllustration}
           imageAlt="Passionate illustration"
           gradientRotation="180deg"
-          columnType="text"
+          columnContent="text"
           wrapsOnTablet={true}
         >
           <p>Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and technology into exciting new solutions.</p>
@@ -64,7 +48,7 @@ function Home() {
           imageURL={resourcefulIllustration}
           imageAlt="Resourceful illustration"
           gradientRotation="90deg"
-          columnType="text"
+          columnContent="text"
           wrapsOnTablet={true}
         >
           <p>Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer collaboration. It guarantees superior results that fulfill our clients’ needs.</p>
@@ -74,7 +58,7 @@ function Home() {
           imageURL={friendlyIllustration}
           imageAlt="Friendly illustration"
           gradientRotation="-90deg"
-          columnType="text"
+          columnContent="text"
           wrapsOnTablet={true}
         >
           <p>We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.</p>

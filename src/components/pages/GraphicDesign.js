@@ -3,7 +3,7 @@ import ThemeProvider from '../../theme/ThemeProvider';
 import {
   viewProjectsData,
   designCardsData
-} from './pagesData/WebDesignData'
+} from './pagesData/GraphicDesignData'
 
 // components
 import Nav from '../common/Nav/Nav';
@@ -13,13 +13,14 @@ import ViewProjects from '../ViewProjects/ViewProjects';
 import DesignCards from '../DesignCards/DesignCards';
 import LeafPattern from '../common/LeafPattern/LeafPattern';
 
-function WebDesign() {
+function GraphicDesign() {
   return (
     <ThemeProvider>
       <Nav />
       <DesignHero
-        title="Web Design">
-        We build websites that serve as powerful marketing tools and bring memorable brand experiences.
+        title="Grapic Design">
+        We deliver eye-catching branding materials that are
+        tailored to meet your business objectives.
       </DesignHero>
       <LeafPattern
         top={280}
@@ -36,4 +37,4 @@ function WebDesign() {
   )
 }
 
-export default WebDesign
+export default GraphicDesign

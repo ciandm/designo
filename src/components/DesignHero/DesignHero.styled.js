@@ -55,7 +55,11 @@ export const Title = styled(h1)`
 `
 
 export const Subtitle = styled(body)`
+
+  font-size: 1.5rem;
+
   @media ${({ theme }) => theme.mediaQueries['above-480']} {
+    font-size: 1.6rem;
     margin: 0 auto;
     max-width: 60%;
   }
