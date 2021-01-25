@@ -86,7 +86,7 @@ export const Details = styled.div`
     width: 100%;
   }
 
-  @media ${({ theme }) => theme.mediaQueries['above-1032']} {
+  @media (hover: hover) and (pointer:fine) {
     ${Card}:hover & {
       background-color: ${({ theme }) => theme.colors.primary.peach};
     }
@@ -97,7 +97,7 @@ export const Title = styled(h3)`
   color: ${({ theme }) => theme.colors.primary.peach};
   margin-bottom: 1.6rem;
 
-  @media ${({ theme }) => theme.mediaQueries['above-1032']} {
+  @media (hover: hover) and (pointer:fine) {
     ${Card}:hover & {
       color: ${({ theme }) => theme.colors.primary.white};
     }
@@ -105,7 +105,7 @@ export const Title = styled(h3)`
 `
 
 export const Subtitle = styled(body)`
-  @media ${({ theme }) => theme.mediaQueries['above-1032']} {
+  @media (hover: hover) and (pointer:fine) {
     ${Card}:hover & {
       color: ${({ theme }) => theme.colors.primary.white};
     }
