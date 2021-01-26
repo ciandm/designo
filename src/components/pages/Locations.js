@@ -3,7 +3,7 @@ import React from 'react'
 //components
 import Nav from '../common/Nav/Nav';
 import ThemeProvider from '../../theme/ThemeProvider';
-import MapCard from '../common/MapCard/MapCard';
+import MapCard from '../MapCard/MapCard';
 import Footer from '../common/Footer/Footer';
 
 function Locations() {
