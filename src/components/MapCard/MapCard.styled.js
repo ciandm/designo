@@ -54,6 +54,31 @@ export const Image = styled.div`
   }
 `
 
+export const Map = styled.div`
+  height: 32rem;
+  width: 100%;
+
+  & > :first-child {
+    height: 100%;
+  }
+
+  @media ${({ theme }) => theme.mediaQueries['above-480']} {
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    overflow: hidden;
+  }
+
+  @media ${({ theme }) => theme.mediaQueries['above-1032']} {
+    height: initial;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    margin-left: ${({ flipped }) => flipped ? '0' : '3rem'};
+    margin-right: ${({ flipped }) => flipped ? '3rem' : '0'};
+    order: ${({ flipped }) => flipped ? 0 : 1};
+    width: 32rem;
+  }
+`
+
 export const Content = styled.div`
   background-color: #FDF3F0;
   display: flex;

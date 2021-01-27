@@ -12,6 +12,7 @@ function Locations() {
       <Nav />
       <MapCard>
         {{
+          position: [43.64422875283527, -79.3945077461587],
           title: "Canada",
           location: [
             'Designo Central Office',
@@ -33,6 +34,7 @@ function Locations() {
         flipped={true}
       >
         {{
+          position: [-30.32917623071111, 149.78827208472495],
           title: "Australia",
           location: [
             'Designo AU Office',
@@ -52,6 +54,7 @@ function Locations() {
       </MapCard>
       <MapCard>
         {{
+          position: [51.732246845237306, -3.8620000766752325],
           title: "United Kingdom",
           location: [
             'Designo UK Office',

@@ -1,23 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import * as S from './MapCard.styled';
+import Map from './Map/Map';
 
 function MapCard({ children, flipped }) {
 
   const {
+    position,
     title,
     location,
     contact,
-    mapImages
   } = children
 
   return (
     <S.Wrapper>
       <S.Card>
-        <S.Image
+        <S.Map
           flipped={flipped}
-          images={mapImages}
-        />
+        >
+          <Map
+            position={position}
+          />
+        </S.Map>
         <S.Content>
           <S.Title>{title}</S.Title>
           {
@@ -45,6 +49,7 @@ function MapCard({ children, flipped }) {
 export default MapCard
 
 MapCard.propTypes = {
+  position: PropTypes.array.isRequired,
   children: PropTypes.shape({
     title: PropTypes.string.isRequired,
     location: PropTypes.array,
