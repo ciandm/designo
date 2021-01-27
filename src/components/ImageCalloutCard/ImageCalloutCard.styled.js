@@ -112,7 +112,7 @@ export const Title = styled(h2)`
 `
 
 export const Body = styled(body)`
-
+  color: ${({ theme }) => theme.colors.secondary.darkGrey};
   & + & {
     margin-top: 3rem;
   }

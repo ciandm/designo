@@ -10,6 +10,7 @@ import GraphicDesign from './components/pages/GraphicDesign';
 import AppDesign from './components/pages/AppDesign';
 import About from './components/pages/About';
 import Locations from './components/pages/Locations';
+import Contact from './components/pages/Contact';
 
 // utils
 import ROUTES from './components/pages/routes/routes';
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <Route path={ROUTES.LOCATIONS}>
           <Locations />
+        </Route>
+        <Route path={ROUTES.CONTACT}>
+          <Contact />
         </Route>
         <Route path={ROUTES.GRAPHIC_DESIGN}>
           <GraphicDesign />

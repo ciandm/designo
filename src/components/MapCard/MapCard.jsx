@@ -11,7 +11,6 @@ function MapCard({ children, flipped }) {
     mapImages
   } = children
 
-  console.log(mapImages);
   return (
     <S.Wrapper>
       <S.Card>

@@ -4,6 +4,7 @@ import React from 'react'
 import Nav from '../common/Nav/Nav';
 import ThemeProvider from '../../theme/ThemeProvider';
 import Footer from '../common/Footer/Footer';
+import Form from '../Form/Form';
 import LeafPattern from '../common/LeafPattern/LeafPattern';
 import IllustrationColumns from '../IllustrationColumns/IllustrationColumns';
 import IllustrationColumn from '../IllustrationColumns/IllustrationColumn/IllustrationColumn';
@@ -20,6 +21,7 @@ function Contact() {
   return (
     <ThemeProvider>
       <Nav />
+      <Form />
       <IllustrationColumns>
         <IllustrationColumn
           title="Canada"
@@ -76,7 +78,9 @@ function Contact() {
           }}
         </IllustrationColumn>
       </IllustrationColumns>
-      <Footer />
+      <Footer
+        letsTalkRemoved={true}
+      />
 
     </ThemeProvider>
   )

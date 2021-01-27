@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Button from '../Button/Button';
 import * as S from './Footer.styled';
 import { Link } from 'react-router-dom';
@@ -11,23 +12,30 @@ import pinterest from '../../../assets/shared/desktop/icon-pinterest.svg';
 import twitter from '../../../assets/shared/desktop/icon-twitter.svg';
 import youtube from '../../../assets/shared/desktop/icon-youtube.svg';
 
-function Footer() {
+function Footer({
+  letsTalkRemoved
+}) {
   return (
     <S.FooterWrapper>
-      <S.LetsTalk>
-        <S.Copy>
-          <h2>Let’s talk about your project</h2>
-          <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
-        </S.Copy>
-        <Button
-          variation="white"
-          as={Link}
-          to={ROUTES.CONTACT}
-        >
-          Get in touch
+      {
+        !letsTalkRemoved &&
+        <S.LetsTalk>
+          <S.Copy>
+            <h2>Let’s talk about your project</h2>
+            <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
+          </S.Copy>
+          <Button
+            variation="white"
+            as={Link}
+            to={ROUTES.CONTACT}
+          >
+            Get in touch
           </Button>
-      </S.LetsTalk>
-      <S.Footer>
+        </S.LetsTalk>
+      }
+      <S.Footer
+        letsTalkRemoved={letsTalkRemoved}
+      >
         <S.Contents>
           <S.FooterNav>
             <S.LogoContainer
@@ -101,3 +109,11 @@ function Footer() {
 }
 
 export default Footer
+
+Footer.propTypes = {
+  letsTalkRemoved: PropTypes.bool,
+}
+
+Footer.defaultProps = {
+  letsTalkRemoved: false
+}

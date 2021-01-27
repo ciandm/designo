@@ -18,6 +18,10 @@ export const Wrapper = styled.div`
   }
   @media ${({ theme }) => theme.mediaQueries['above-1032']} {
     padding: 1.6rem 0;
+
+    &:nth-of-type(3) {
+      padding-bottom: 8rem;
+    }
   }
 `
 

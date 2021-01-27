@@ -91,13 +91,10 @@ export const NavLink = styled(Link).attrs({ activeClassName: 'nav-item-active' }
   text-decoration: none;
   text-transform: uppercase;
   padding: 0 2.4rem;
+  position: relative;
 
   &.nav-item-active {
-    text-decoration: underline;
-  }
-
-  &:hover {
-    text-decoration: underline;
+    color: ${({ theme }) => theme.colors.primary.peach};
   }
 
   & + & {
@@ -116,19 +113,43 @@ export const NavLink = styled(Link).attrs({ activeClassName: 'nav-item-active' }
     color: ${({ theme }) => theme.colors.secondary.darkGrey};
     font-size: 1.4rem;
     line-height: 1;
-    padding: 0;
+    padding: 2rem 0;
+
+    &::after {
+      background-color: ${({ theme }) => theme.colors.primary.peach};
+      content: '';
+      display: block;
+      height: 1px;
+      margin-top: 5px;
+      transform: scaleX(0);
+      transition: transform .25s ease-in-out;
+      position: absolute;
+      width: 100%;
+    }
+
+    &.nav-item-active {
+      color: ${({ theme }) => theme.colors.secondary.darkGrey};
+    }
+
+    &.nav-item-active::after {
+      transform: scaleX(1);
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
 
     & + & {
-      padding-top: 0;
+      padding-top: 2rem;
       margin-left: 4.2rem;
     }
 
     &:first-child {
-      padding-top: 0;
+      padding-top: 2rem;
     }
 
     &:last-child  {
-      padding-bottom: 0;
+      padding: 2rem 0;
     }
   }
 `

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import letsTalkPattern from '../../../assets/shared/desktop/bg-pattern-call-to-action.svg';
 import { Link } from 'react-router-dom';
 
@@ -7,6 +7,10 @@ export const FooterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 6rem;
+
+  @media ${({ theme }) => theme.mediaQueries['above-1032']} {
+    padding-top: 8rem;
+  }
 `
 
 export const LetsTalk = styled.div`
@@ -86,7 +90,8 @@ export const Footer = styled.footer`
   position: relative;
   width: 100%;
 
-  &::before {
+  ${({ letsTalkRemoved }) => !letsTalkRemoved && css`
+    &::before {
     background-color: inherit;
     content: '';
     display: block;
@@ -99,8 +104,9 @@ export const Footer = styled.footer`
     @media ${({ theme }) => theme.mediaQueries['above-480']} {
       height: 7.2rem;
       top: -7.2rem;
+      }
     }
-  }
+  `}
 `
 
 export const Contents = styled.div`
