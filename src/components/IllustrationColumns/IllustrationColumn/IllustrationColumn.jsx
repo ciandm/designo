@@ -11,6 +11,7 @@ function IllustrationColumn({
   children
 }) {
 
+  //
   const { title, body } = children;
 
   return (
@@ -55,4 +56,8 @@ IllustrationColumn.propTypes = {
   gradientRotation: PropTypes.string.isRequired,
   columnContent: PropTypes.oneOf(['text', 'button']).isRequired,
   wrapsOnTablet: PropTypes.bool,
+  children: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    body: PropTypes.node,
+  })
 }

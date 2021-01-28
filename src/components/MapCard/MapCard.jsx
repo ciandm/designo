@@ -27,16 +27,20 @@ function MapCard({ children, flipped }) {
           {
             location &&
             <S.List>
-              {location.map(item => (
-                <S.Item>{item}</S.Item>
+              {location.map((item, index) => (
+                <S.Item
+                  key={index}
+                >{item}</S.Item>
               ))}
             </S.List>
           }
           {
             contact &&
             <S.List>
-              {contact.map(item => (
-                <S.Item>{item}</S.Item>
+              {contact.map((item, index) => (
+                <S.Item
+                  key={index}
+                >{item}</S.Item>
               ))}
             </S.List>
           }
@@ -49,8 +53,8 @@ function MapCard({ children, flipped }) {
 export default MapCard
 
 MapCard.propTypes = {
-  position: PropTypes.array.isRequired,
   children: PropTypes.shape({
+    position: PropTypes.array.isRequired,
     title: PropTypes.string.isRequired,
     location: PropTypes.array,
     contact: PropTypes.array,
