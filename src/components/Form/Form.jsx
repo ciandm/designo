@@ -18,6 +18,8 @@ function Form() {
     message: false
   })
 
+  const [submitted, setSubmitted] = useState(false);
+
   const handleInputChange = (e, name) => {
     setInputs(prevInputs => ({
       ...prevInputs,
@@ -50,7 +52,7 @@ function Form() {
     }
 
     if (valid) {
-      console.log('woohoo');
+      setSubmitted(true);
     }
   }
 
@@ -112,10 +114,18 @@ function Form() {
             errors.message && <S.InputError topAligned>Can't be empty</S.InputError>
           }
         </S.InputGroup>
-        <Button
-          type="submit"
-          variation="white"
-        >Submit</Button>
+        <S.SubmitGroup>
+          {
+            submitted ? (
+              <S.Submitted>Thank you. A member of our team will be in touch shortly.</S.Submitted>
+            ) : (
+                <Button
+                  type="submit"
+                  variation="white"
+                >Submit</Button>
+              )
+          }
+        </S.SubmitGroup>
       </S.Form>
     </S.FormContainer>
   )

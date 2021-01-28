@@ -80,14 +80,6 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
 
-  & button {
-    margin-top: 4rem;
-
-    @media ${({ theme }) => theme.mediaQueries['above-1032']} {
-      align-self: flex-end;
-    }
-  }
-
   @media ${({ theme }) => theme.mediaQueries['above-1032']} {
     width: 38rem;
   }
@@ -154,4 +146,27 @@ export const InputError = styled.span`
     margin-left: 1rem;
     width: 2rem;
   }
+`
+
+export const SubmitGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  width: 100%;
+
+  & button {
+    align-self: center;
+  }
+
+  @media ${({ theme }) => theme.mediaQueries['above-1032']} {
+    & button {
+      align-self: flex-end;
+    }
+  }
+`
+
+export const Submitted = styled(body)`
+  color: ${({ theme }) => theme.colors.primary.white};
+  margin-bottom: 1.2rem;
+  text-align: center;
 `
