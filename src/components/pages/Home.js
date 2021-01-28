@@ -1,6 +1,5 @@
 import React from 'react'
-import ThemeProvider, { useWindowSize } from '../../theme/ThemeProvider';
-import ROUTES from './routes/routes';
+import ThemeProvider from '../../theme/ThemeProvider';
 // Components
 import Nav from '../common/Nav/Nav';
 import HomeHero from '../HomeHero/HomeHero';
